@@ -4,3 +4,174 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+
+$main-light: #EDF2C5;
+$main-dark : #778A50;
+$second-light: #F7FBDA;
+$second-dark : #7D7D7D;
+
+$font-text: "Arial";
+$font-nav: "Arial Black";
+
+body{
+	background-color: $main-light;
+	font-size: 0;
+}
+
+a{
+	text-decoration: none;
+	&:link{
+		color: $main-light;
+	}
+	&:visited{
+		color: $main-light;
+	}
+}
+
+.container{
+	width: 940px;
+	margin: auto;
+	overflow: auto;
+
+	>header{
+		margin-top: 53px;
+		margin-bottom: 17px;
+
+		>.title{
+			font-family: $font-nav;
+			color: $main-dark;
+			font-size: 44px;
+			display: inline-block;
+		}
+
+		>.bar{
+			font-size: 0;
+			font-family: $font-nav;
+			color: $main-dark;
+			float: right;
+			display: flex;
+			margin-top: 15px;
+
+			>a{
+				display: inline-block;
+				margin-right: 10px
+			}
+
+			button{
+				font-family: $font-nav;
+				font-size: 14px;
+				margin-left: 10px;
+				color: $main-dark;
+				background-color: $main-light;
+				border: 1px solid $main-dark;
+				border-radius: 3px;
+			}
+
+			>.vl{
+				width: 1px;
+				height: 25px;
+				background-color: $main-dark;
+				display: inline-block;
+			}
+		}
+		
+	}
+
+	nav{
+		font-family: $font-nav;
+		color: $main-light;
+		background-color: $main-dark;
+		font-size: 16px;
+		border-radius: 3px;
+	}
+	
+	>nav
+	{
+		padding: 16px 30px;
+		margin-bottom: 20px;
+
+		>ul{
+			display: inline-block;
+			margin-right: 60px;
+		}
+	}
+
+	>.main-vision{
+		border-radius: 1px;
+		margin-bottom: 30px;
+	}
+
+	>div>.content{
+		font-family: $font-text;
+		width: 445px;
+		display: block;
+		
+		&:first-child{
+			float: left;
+		}
+
+		&:last-child{
+			float: right;
+		}
+
+		>nav{
+			height: 15px;
+			padding: 15px 30px;
+			margin-bottom: 15px;
+		}
+
+		>.content-vegetables{
+			>img{
+				border-radius: 2px;
+				margin-right: 12px;
+
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+
+		>.content-contact{
+			$padding-vertical: 15px;
+			background-color: $second-light;
+			height: calc(140px - #{$padding-vertical} * 2);
+			padding: 15px $padding-vertical;
+			margin-bottom: 30px;
+
+			>p{
+				font-size: 12px;
+				letter-spacing: -0.05px;
+				line-height: 1.33;
+				color: $second-dark;
+				margin-bottom: 3px;
+
+				&:first-child{
+					margin-bottom: 16px;
+				}
+			}
+
+			>hr{
+				border-top-color: $second-dark;
+				margin-bottom: 16px;
+			}
+		}
+	}
+}
+
+footer
+{
+	background-color: $main-dark;
+	color: $main-light;
+	font-family: $font-text;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	
+	>p{
+		margin: auto;
+		font-size: 12px;
+		display: flex;
+		justify-content: center;
+	}
+}
